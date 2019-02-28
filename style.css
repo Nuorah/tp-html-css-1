@@ -37,6 +37,29 @@ h2 {
 	border-bottom-color: red;
 	border-bottom-width: 1px;
 	padding-bottom:10px;
+	margin-top: 40px;
+}
+
+h3:first-child{
+	margin-top: 0;
+}
+
+ol {
+	page-break-inside: avoid;
+}
+
+table {
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+td {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold; 
+	font-size: 30px;
+	color: #ff423c;
+	text-align: center;
 }
 
 img {
@@ -49,3 +72,16 @@ img {
 img + h2 {
 	width: 50%;
 }
+
+input {
+	width: 3em;
+	text-align: right;
+}
+
+div {
+	columns: 2;
+	margin-bottom: 40px;
+}
+
+
+
