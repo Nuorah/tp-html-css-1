@@ -32,12 +32,12 @@
 		<h2>Ingrédients (pour ~10 verrines)</h2>
 
 		<ul>
-			<li>1 grosse boîte de poires au sirop</li>
+			<li><span data-value="1">1</span> grosse boîte de poires au sirop</li>
 			<li>Spéculoos (moins d'un paquet)</li>
-			<li>250g de Mascarpone</li>
-			<li>3 oeufs</li>
-			<li>100g de sucre</li>
-			<li>1 sachet de sucre vanillé</li>
+			<li><span data-value="250">250</span>g de Mascarpone</li>
+			<li><span data-value="3">3</span> oeufs</li>
+			<li><span data-value="100">100</span>g de sucre</li>
+			<li><span data-value="1">1</span> sachet de sucre vanillé</li>
 		</ul>
 
 	Multiplier les quantités par </span><input value="2">.
@@ -78,5 +78,15 @@
 	<p>Bon appétit !</p>
 	<p>Thomas.</p>
 </main>
+<script>
+	document.getElementsByTagName("input")[0].addEventListener("input", function() {
+    var value = this.value;
+    var spanElements = document.getElementsByTagName("span");
+    for(i = 0; i < spanElements.length; i++){
+    	baseValue = spanElements[i].getAttribute("data-value");
+    	spanElements[i].innerHTML = baseValue*(value/2);
+    }
+});
+	</script>
 </body>
 </html>
